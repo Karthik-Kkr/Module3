@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <bean id="airtel"    class="com.capg.spring.AirtelSim">
+    <property name="callCharges" value="1.5"/>
+    <property name="internetSpeed" value="8.5"/>
+    <property name="contacts">
+    <list>
+    <value>Karthik</value>
+    <value>dfgdzh</value>
+    <value>dfzdrgg</value>
+    </list>
+    </property>
+    </bean>
+    
+    <bean id="airtel1"    class="com.capg.spring.AirtelSim">
+    <constructor-arg name="callCharges" value="2.5"/>
+    <constructor-arg name="internetSpeed" value="6.5"/>
+    </bean>
+    
+    <bean id="vodafone"  class="com.capg.spring.VodafoneSim">
+    <property name="callCharges" value="1.5"/>
+    <property name="internetSpeed" value="8.5"/>
+    <property name="contacts">
+    <map>
+    <entry key="Karthik" value="9177367703"/>
+    <entry key="sdakf" value="12493859253"/>
+    <entry key="afdgsd" value="97846375843"/>
+    </map>
+    </property>
+    </bean>
+    
+    <bean id="mobile" class="com.capg.spring.Mobile" autowire="byName">
+    
+    </bean>   
+</beans> 
